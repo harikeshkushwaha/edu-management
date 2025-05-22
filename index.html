@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styyle.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Edu. Management</div>
+        <ul>
+            <li><a href="#" class="active" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('students')">Students</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Edu. Management</h1>
+                <p>Empowering Institutions with Seamless Student Management</p>
+                <a href="#" class="cta-btn" onclick="showSection('students')">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Students" />
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <h2>Easy Enrollment</h2>
+                <p>Register and manage students with just a few clicks.</p>
+            </div>
+            <div class="feature-card">
+                <h2>Performance Tracking</h2>
+                <p>Monitor grades and progress in real time.</p>
+            </div>
+            <div class="feature-card">
+                <h2>Secure Data</h2>
+                <p>Your students’ data is protected and private.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Section -->
+    <section id="students" class="section" style="display:none;">
+        <h2>Student Management</h2>
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="text" id="grade" placeholder="Grade" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit" id="submitBtn">Add Student</button>
+        </form>
+        <input type="text" id="searchBox" placeholder="Search students..." />
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th><th>Age</th><th>Grade</th><th>Email</th><th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+        </table>
+    </section>
+    <footer>
+        <p>&copy; 2025 EduManage. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
